@@ -28,7 +28,7 @@
 
 > Describe your project in 1 or 2 sentences.
 
-In this project, I will start building  school library app. In this initial step, I implemented the classes to represent students and teachers.
+In this project, I will start building  school library app. In this initial step, I implemented the classes to represent students and teachers.Then I implemented the Decorator design pattern
 
 **[School library:: setup]** oop school libray project built with ruby
 
