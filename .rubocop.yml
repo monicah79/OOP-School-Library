@@ -6,11 +6,6 @@ AllCops:
     - "node_modules/**/*"
 
   DisplayCopNames: true
-Metrics/BlockLength:
-  AllowedMethods:
-    - some_method_name
-  AllowedPatterns:
-    - ^foo_
 
 Layout/LineLength:
   Max: 120
