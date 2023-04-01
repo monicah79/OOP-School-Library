@@ -6,10 +6,9 @@ require_relative './teacher'
 require_relative './classroom'
 require_relative './nameable'
 
-# rubocop:disable Metrics
-
 class App
-    attr_accessor :books, :people, :rentals
+  attr_accessor :books, :people, :rentals
+
   def initialize
     @books = []
     @people = []
@@ -30,7 +29,7 @@ class App
     if @books.empty?
       puts 'The book list is currently empty'
     else
-        puts 'Existing books'
+      puts 'Existing books'
       @books.each do |book|
         puts "Title: '#{book.title}', Author: '#{book.author}'"
       end
@@ -41,7 +40,7 @@ class App
     if @people.empty?
       puts 'The\'s list is currently empty!'
     else
-        puts 'Existing people'
+      puts 'Existing people'
       @people.each do |person|
         puts "Name: #{person.name} Age: #{person.age} ID: #{person.id}"
       end
@@ -52,13 +51,13 @@ class App
     puts 'Are you a:'
     puts '1 - Student'
     puts '2 - Teacher'
-    person_input = gets.chomp.to_i
+
 
     case option
     when 1
-     create_student
-    when 2 
-        create_teacher
+      create_student
+    when 2
+      create_teacher
     else
       raise ' Invalid option, please enter 1 or 2'
     end
@@ -72,16 +71,16 @@ class App
     puts 'classroom:'
     classroom = gets.chomp
 
-    puts 'Do you have permission? [Y/N]:'
-    parent_permission = gets.chomp.capitalize
+    puts 'parent permission? [Y/N]:'
+
 
     student = Student.new(age, classroom, name, true)
     @people << student
-  puts 'Student created successfully'
+    puts 'Student created successfully'
   end
   sleep 0.5
-end
-    
+
+
 
   def create_teacher
     puts 'name:'
@@ -96,9 +95,7 @@ end
   end
 
   def create_rental
-    if @books.empty? && if @people.empty?
-        puts 'sorry,Not found'
-
+    puts 'sorry,Not found' if @books.empty? && @people.empty?
     date = input_rental_date
     rental = Rental.new(date, book, person)
     @rentals << rental
@@ -142,6 +139,5 @@ end
         puts "#{rental.book.title} by #{rental.book.author}, rented on #{rental.date}"
       end
     end
+  end
 end
-
-# rubocop: enable Metrics
