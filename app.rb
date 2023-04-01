@@ -52,7 +52,6 @@ class App
     puts '1 - Student'
     puts '2 - Teacher'
 
-
     case option
     when 1
       create_student
@@ -72,16 +71,11 @@ class App
     classroom = gets.chomp
 
     puts 'parent permission? [Y/N]:'
-
-
     student = Student.new(age, classroom, name, true)
     @people << student
     puts 'Student created successfully'
   end
   sleep 0.5
-
-
-
   def create_teacher
     puts 'name:'
     name = gets.chomp
