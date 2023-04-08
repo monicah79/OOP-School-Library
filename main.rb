@@ -13,7 +13,7 @@ def main
     puts '3 - Create a person'
     puts '4 - Create a book'
     puts '5 - Create a rental'
-    puts '6 - List all rentals for a given person id'
+    puts '6 - List all rentals'
     puts '7 - Exit'
     puts
 
@@ -24,13 +24,14 @@ def main
     when 2
       app.list_all_people
     when 3
-      app.create_person
+      app.create_a_person
     when 4
       app.create_book
     when 5
       app.create_rental
     when 6
-      app.list_rentals
+      app.list_all_rentals
+     
     when 7
       puts 'Thank you for using this app!'
       exit
